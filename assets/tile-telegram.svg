@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 846 420" role="img" aria-label="Telegram Downloader">
+<rect x="6" y="6" width="834" height="408" rx="22" fill="#101010"/>
+<text x="40" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600" font-size="20" fill="#f1f0eb" opacity=".8">RUST · WINDOWS · MACOS · LINUX</text>
+<g transform="translate(596 44) scale(.21)"><path d="M212 236 512 690 448 372Z" fill="#f1f0eb"/><path d="M812 236 512 690 576 372Z" fill="#f1f0eb"/><path d="M448 372 512 690 576 372 512 250Z" fill="#ff6a00"/><rect x="252" y="744" width="520" height="56" fill="#f1f0eb"><animate attributeName="width" values="0;520;520" keyTimes="0;.6;1" dur="3s" repeatCount="indefinite"/></rect></g>
+<text x="40" y="270" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="800" font-size="66" letter-spacing="-2" fill="#f1f0eb">Telegram Downloader</text>
+<text x="40" y="318" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600" font-size="24" fill="#f1f0eb" opacity=".8">Save every file from a Telegram group.</text><text x="40" y="352" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600" font-size="24" fill="#f1f0eb" opacity=".8">One app, no terminal.</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 846 420" role="img" aria-label="StopWatch">
+<rect x="6" y="6" width="834" height="408" rx="22" fill="#ff6a00"/>
+<text x="40" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600" font-size="20" fill="#101010" opacity=".8">C++ · SWIFT · FIRMWARE</text>
+<g transform="translate(700 150)"><circle r="84" fill="none" stroke="#101010" stroke-width="10"/><rect x="-14" y="-112" width="28" height="22" fill="#101010"/><path d="M0 0V-58" stroke="#f1f0eb" stroke-width="10" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/></path><circle r="9" fill="#101010"/></g>
+<text x="40" y="270" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="800" font-size="84" letter-spacing="-2" fill="#101010">StopWatch</text>
+<text x="40" y="318" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600" font-size="24" fill="#101010" opacity=".8">Community firmware for the M5Stack StopWatch,</text><text x="40" y="352" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600" font-size="24" fill="#101010" opacity=".8">with an iPhone companion and Home Assistant.</text>
+</svg>
