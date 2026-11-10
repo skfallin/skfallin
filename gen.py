@@ -92,7 +92,7 @@ def hero():
     cmd = "".join(f'<text x="{X0 + (2 + i) * CW:.1f}" y="60" {on(.5 + .09 * i)}>{ch}</text>' for i, ch in enumerate("fetch"))
     xi, xv = X0 + COLS * CW + 30, X0 + COLS * CW + 30 + 9 * CW
     rows = [("builds", "desktop apps · firmware · iPhone · Android"), ("stack", "Rust · Swift · C++ · Kotlin · TypeScript"),
-            ("web", "iterix.it"), ("privacy", "no cloud, no accounts. It stays on your device.")]
+            ("web", "torinz.it"), ("studio", "iterix.it"), ("privacy", "no cloud, no accounts. It stays on your device.")]
     info = (f'<text x="{xi}" y="124" font-size="15" font-weight="700" fill="{PAPER}" {on(T0 + .05)}>skfallin</text>'
             f'<text x="{xi}" y="146" fill="{MUTE}" {on(T0 + .1)}>Iterate until it ships.</text>'
             f'<rect x="{xi}" y="160" width="{841 - 24 - xi:.1f}" height="1" fill="{LINE}" {on(T0 + .15)}/>')
@@ -118,10 +118,10 @@ def hero():
 
 # ---- schede ----
 def card(w, h, vh, visual, name, line, tag="", css=""):
-    big = w > 300
-    text = f'<text x="21" y="{vh + (31 if big else 27)}" {SANS} font-size="{16 if big else 14}" font-weight="600" fill="{PAPER}">{name}</text>'
-    text += f'<text x="21" y="{vh + (53 if big else 46)}" {SANS} font-size="{12.5 if big else 11.5}" fill="{MUTE}">{line}</text>'
-    if tag: text += f'<text x="{w - 21}" y="{vh + 30}" text-anchor="end" {MONO} font-size="10.5" fill="{MUTE}">{tag}</text>'
+    ny, ly, ns, ls = (38, 62, 21, 14) if w > 600 else (31, 53, 16, 12.5) if w > 300 else (27, 46, 14, 11.5)
+    text = f'<text x="21" y="{vh + ny}" {SANS} font-size="{ns}" font-weight="600" fill="{PAPER}">{name}</text>'
+    text += f'<text x="21" y="{vh + ly}" {SANS} font-size="{ls}" fill="{MUTE}">{line}</text>'
+    if tag: text += f'<text x="{w - 21}" y="{vh + ny - 1}" text-anchor="end" {MONO} font-size="10.5" fill="{ORANGE if w > 600 else MUTE}">{tag}</text>'
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h + 10}" viewBox="0 0 {w} {h + 10}" role="img" aria-label="{name}. {line}"><title>{name}</title>
 <style>{css}{STILL}}}</style>
 <defs><clipPath id="c"><rect x="5" width="{w - 10}" height="{h}" rx="12"/></clipPath><clipPath id="v"><rect x="5" width="{w - 10}" height="{vh}"/></clipPath></defs>
@@ -170,9 +170,10 @@ def pin():                            # sei cifre una alla volta, poi si azzera 
     css = "".join(f"@keyframes d{i}{{0%{{fill:{ORANGE}}}{12 + i * 8}%{{fill:{INK}}}84%,100%{{fill:{ORANGE}}}}}" for i in range(6))
     return f'<rect x="5" width="201" height="112" fill="{ORANGE}"/>{out}', css
 
-tg, steak = shot("telegram", 413, 289, 206, 14), shot("steak", 201, 435, 112, 18)
+tg, steak, site = shot("telegram", 413, 289, 206, 14), shot("steak", 201, 435, 112, 18), shot("torinz", 836, 455, 380, 16)
 out = {
     "hero": hero(),
+    "tile-torinz": card(846, 462, 380, site[0], "torinz.it", "My portfolio: apps, websites and projects between software and hardware.", "NEW · PORTFOLIO", site[1]),
     "tile-stopwatch": card(423, 276, 206, *stopwatch()[:1], "StopWatch", "Community firmware for the M5Stack StopWatch C152", "M5Stack · iPhone", stopwatch()[1]),
     "tile-telegram": card(423, 276, 206, tg[0], "Telegram Downloader", "Save every file from a Telegram group. One app, no terminal.", "Win · macOS · Linux", tg[1]),
     "tile-inputcheck": card(211, 172, 112, keyboard()[0], "InputCheck", "Keyboard and mouse tester", css=keyboard()[1]),
